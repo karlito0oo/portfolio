@@ -104,6 +104,13 @@ header .container {
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 0.5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 .nav-wrapper {
@@ -768,6 +775,13 @@ nav button:hover::after, nav button.active::after {
   
   .certification-icon {
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .certification-content {
+    text-align: center;
+    width: 100%;
   }
 }
 

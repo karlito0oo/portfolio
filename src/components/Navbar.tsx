@@ -38,7 +38,13 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <header>
       <div className="container">
-        <div className="logo">KF</div>
+        <div 
+          className="logo" 
+          onClick={() => handleNavClick('home')}
+          style={{ cursor: 'pointer' }}
+        >
+          KF
+        </div>
         
         <div className="hamburger-menu" onClick={toggleMenu}>
           <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
