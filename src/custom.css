@@ -348,6 +348,18 @@ nav button:hover::after, nav button.active::after {
   line-height: 1.6;
 }
 
+.timeline-responsibilities {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.timeline-responsibilities li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
 .timeline-skills {
   display: flex;
   flex-wrap: wrap;
@@ -730,4 +742,76 @@ nav button:hover::after, nav button.active::after {
 .theme-toggle svg {
   width: 20px;
   height: 20px;
+}
+
+/* Skills Section */
+#skills {
+  padding: 8rem 0 5rem;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+.skills-section, .certifications-section, .awards-section {
+  margin-bottom: 3rem;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.skills-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.skill-bullet {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  line-height: 1;
+}
+
+.certification-item, .award-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.certification-icon, .award-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 119, 182, 0.1);
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.certification-content, .award-content {
+  flex-grow: 1;
+}
+
+.certification-content h4, .award-content h4 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.award-content p {
+  color: var(--light-text);
+  font-size: 0.95rem;
 } 

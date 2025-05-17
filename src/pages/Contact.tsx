@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+                  <p><a href="mailto:karl.kenneth.flores20@gmail.com">karl.kenneth.flores20@gmail.com</a></p>
                 </div>
               </div>
               
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>+63922 480 0426</p>
                 </div>
               </div>
               
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Location</h4>
-                  <p>San Francisco, CA</p>
+                  <p>B22A L2 Terra Alta Homes, Paliparan 1 Dasmarinas, Cavite</p>
                 </div>
               </div>
             </div>

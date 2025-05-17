@@ -8,13 +8,13 @@ const Home: React.FC = () => {
           <div className="w-half-md home-content">
             <p className="home-greeting">Hello, I'm</p>
             <h1 className="home-name">
-              John <span>Doe</span>
+              Karl <span>Kenneth</span> Flores
             </h1>
             <h2 className="home-position">
-              Software Engineer & Web Developer
+              Software Engineer
             </h2>
             <p className="home-description">
-              I build exceptional and accessible digital experiences for the web. Specialized in creating modern, responsive web applications using cutting-edge technologies.
+              Throughout my seven-year career as full-stack developer, I have focused on developing scalable well documented codes. I enjoyed working collaboratively but can also run projects independently.
             </p>
             <div className="btn-group">
               <button 
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
           
           <div className="w-half-md">
             <div className="profile-image">
-              <img src="https://i.imgur.com/6VBx3io.png" alt="John Doe" />
+              <img src="https://i.imgur.com/6VBx3io.png" alt="Karl Kenneth Flores" />
             </div>
           </div>
         </div>

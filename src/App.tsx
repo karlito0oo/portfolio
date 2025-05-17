@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Projects from './pages/Projects'
+import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         {activeSection === 'home' && <Home />}
         {activeSection === 'experience' && <Experience />}
         {activeSection === 'projects' && <Projects />}
+        {activeSection === 'skills' && <Skills />}
         {activeSection === 'contact' && <Contact />}
       </main>
     </div>

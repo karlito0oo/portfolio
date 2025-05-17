@@ -13,13 +13,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection, theme,
     { id: 'home', label: 'Home' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
     <header>
       <div className="container">
-        <div className="logo">JD</div>
+        <div className="logo">KF</div>
         
         <div className="nav-wrapper">
           <nav>

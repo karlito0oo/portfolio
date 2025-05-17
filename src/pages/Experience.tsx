@@ -4,27 +4,48 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      role: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      duration: 'Jan 2022 - Present',
-      description: 'Leading a team of developers in creating enterprise-grade web applications using React, Node.js, and AWS. Implemented CI/CD pipelines that reduced deployment time by 40%.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'AWS', 'Docker']
+      role: 'Advance App Engineering Specialist',
+      company: 'Accenture',
+      duration: 'July 2023 - Present',
+      description: '',
+      responsibilities: [
+        'Lead technical development while serving as Scrum Master and Release Train Engineer to ensure team alignment with agile processes',
+        'Provide technical leadership and mentoring to junior engineers while promoting best coding practices and standards',
+        'Conduct thorough code reviews and provide constructive feedback to foster a collaborative and positive team culture',
+        'Collaborate with cross-functional teams including product managers, designers, and QA engineers to deliver high-quality products',
+        'Implement and maintain quality assurance processes including unit testing, integration testing, and automated testing'
+      ],
+      technologies: ['Technical Leadership', 'Scrum Master', 'RTE', 'Code Reviews', 'Quality Assurance']
     },
     {
       id: 2,
-      role: 'Frontend Developer',
-      company: 'Digital Solutions Co.',
-      duration: 'Mar 2019 - Dec 2021',
-      description: 'Developed responsive web applications with modern JavaScript frameworks. Collaborated with UI/UX designers to implement pixel-perfect designs and improve user experience.',
-      technologies: ['JavaScript', 'React', 'Redux', 'SASS', 'Webpack']
+      role: 'Software Engineer',
+      company: 'Realtair Inc.',
+      duration: 'June 2020 - June 2023',
+      description: '',
+      responsibilities: [
+        'Led production deployments and managed release cycles for web applications',
+        'Successfully migrated Laravel applications from version 6 to 9, enhancing security and performance',
+        'Identified and patched security vulnerabilities in existing applications to prevent data breaches',
+        'Transitioned frontend architecture from vanilla JS/jQuery to Vue.js and later to React.js for improved maintainability',
+        'Optimized performance by reducing Largest Contentful Paint (LCP) from 3+ seconds to 1.9 seconds',
+        'Implemented NewRelic integration for comprehensive monitoring and troubleshooting',
+        'Reduced operating costs by implementing more efficient alternatives to third-party services like Pusher'
+      ],
+      technologies: ['Laravel 6-9', 'Vue.js', 'React.js', 'Security Patching', 'Performance Optimization', 'NewRelic']
     },
     {
       id: 3,
-      role: 'Junior Web Developer',
-      company: 'WebCraft Studios',
-      duration: 'Jun 2017 - Feb 2019',
-      description: 'Built and maintained client websites using HTML, CSS, and JavaScript. Worked with WordPress and custom PHP solutions to create dynamic web experiences.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress']
+      role: 'IT Staff',
+      company: 'Jericho Security Services',
+      duration: 'June 2018 - Dec 2019',
+      description: '',
+      responsibilities: [
+        'Developed Daily Time Record (DTR) system using PHP (CodeIgniter), Bootstrap and jQuery',
+        'Provided technical support and processed information requests from employees',
+        'Maintained database integrity and system security for company records'
+      ],
+      technologies: ['PHP', 'CodeIgniter', 'JavaScript', 'jQuery', 'Bootstrap']
     }
   ];
 
@@ -51,7 +72,13 @@ const Experience: React.FC = () => {
                   <span className="timeline-date">{experience.duration}</span>
                 </div>
                 
-                <p className="timeline-description">{experience.description}</p>
+                {experience.description && <p className="timeline-description">{experience.description}</p>}
+                
+                <ul className="timeline-responsibilities">
+                  {experience.responsibilities.map((responsibility, idx) => (
+                    <li key={idx}>{responsibility}</li>
+                  ))}
+                </ul>
                 
                 <div className="timeline-skills">
                   {experience.technologies.map(tech => (
