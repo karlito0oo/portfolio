@@ -1,61 +1,17 @@
 import React from 'react';
+import shopmaraphLogo from '../assets/shopmaraphlogo.jpg';
 
 const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform with product catalog, shopping cart, and payment processing capabilities.',
-      image: 'https://i.imgur.com/0ACPgAu.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'ShopMara PH',
+      description: 'A modern e-commerce platform for a clothing store featuring a responsive design, secure user authentication, product catalog with categories, shopping cart functionality, and seamless checkout process. Implemented with a Laravel backend API and React frontend for optimal performance.',
+      image: shopmaraphLogo,
+      technologies: ['Laravel', 'React JS', 'TypeScript', 'MySQL', 'Tailwind CSS'],
+      liveUrl: 'https://shopmaraph.com/',
+      githubUrl: 'https://github.com/karlito0oo/ShopMaraPH'
     },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'A Kanban-style task management application with drag-and-drop functionality and team collaboration features.',
-      image: 'https://i.imgur.com/xGZfEVG.jpg',
-      technologies: ['React', 'Redux', 'Firebase', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A weather forecast dashboard that displays current and future weather conditions based on location.',
-      image: 'https://i.imgur.com/KRzFnrR.jpg',
-      technologies: ['JavaScript', 'OpenWeather API', 'Chart.js', 'SCSS'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 4,
-      title: 'Social Media Analytics',
-      description: 'A dashboard for social media managers to track engagement metrics and audience demographics.',
-      image: 'https://i.imgur.com/vYs4qEt.jpg',
-      technologies: ['React', 'TypeScript', 'D3.js', 'Node.js'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 5,
-      title: 'Fitness Tracker',
-      description: 'A mobile-first web application to track fitness activities, set goals, and visualize progress over time.',
-      image: 'https://i.imgur.com/VyRvwY4.jpg',
-      technologies: ['React Native', 'GraphQL', 'Apollo', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 6,
-      title: 'Recipe Finder',
-      description: 'A web application that helps users find recipes based on available ingredients and dietary preferences.',
-      image: 'https://i.imgur.com/AHJNKZ1.jpg',
-      technologies: ['Vue.js', 'Vuex', 'Edamam API', 'CSS Grid'],
-      liveUrl: '#',
-      githubUrl: '#'
-    }
   ];
 
   return (
