@@ -18,12 +18,23 @@ function App() {
     return savedTheme || (prefersDark ? 'dark' : 'light')
   })
   
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   useEffect(() => {
     // Update data-theme attribute on document.documentElement when theme changes
     document.documentElement.setAttribute('data-theme', theme)
     // Save theme preference to localStorage
     localStorage.setItem('theme', theme)
   }, [theme])
+  
+  useEffect(() => {
+    // Add or remove class to prevent body scrolling when menu is open
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open')
+    } else {
+      document.body.classList.remove('menu-open')
+    }
+  }, [isMenuOpen])
   
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
@@ -36,6 +47,8 @@ function App() {
         setActiveSection={setActiveSection} 
         theme={theme}
         toggleTheme={toggleTheme}
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
       />
       
       <main>
