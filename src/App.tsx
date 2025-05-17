@@ -39,7 +39,7 @@ function App() {
       />
       
       <main>
-        {activeSection === 'home' && <Home />}
+        {activeSection === 'home' && <Home setActiveSection={setActiveSection} />}
         {activeSection === 'experience' && <Experience />}
         {activeSection === 'projects' && <Projects />}
         {activeSection === 'skills' && <Skills />}

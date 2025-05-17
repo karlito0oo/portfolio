@@ -203,6 +203,11 @@ nav button:hover::after, nav button.active::after {
   transition: var(--transition);
   border: none;
   font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn-primary {
@@ -679,18 +684,50 @@ nav button:hover::after, nav button.active::after {
 
 @media (max-width: 767px) {
   .home-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+  
+  .home-position {
+    font-size: 1.25rem;
+  }
+  
+  .home-description {
+    font-size: 1rem;
   }
   
   .profile-image {
-    margin-top: 3rem;
-    width: 250px;
-    height: 250px;
+    margin: 2.5rem auto 0;
+    width: 220px;
+    height: 220px;
   }
   
   #home {
     height: auto;
     padding: 7rem 0 3rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .flex-row-md {
+    flex-direction: column;
+  }
+  
+  .w-half-md {
+    width: 100%;
   }
   
   nav {
@@ -716,6 +753,44 @@ nav button:hover::after, nav button.active::after {
   .timeline-date {
     margin-top: 5px;
     margin-bottom: 10px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .certification-icon {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-name {
+    font-size: 1.8rem;
+  }
+  
+  .home-greeting {
+    font-size: 0.95rem;
+  }
+  
+  .home-position {
+    font-size: 1.1rem;
+  }
+  
+  .home-description {
+    font-size: 0.95rem;
+  }
+  
+  .profile-image {
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -851,21 +926,4 @@ nav button:hover::after, nav button.active::after {
   color: var(--text-color);
   font-size: 1rem;
   line-height: 1.6;
-}
-
-@media (max-width: 767px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .certification-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-  
-  .certification-icon {
-    margin-bottom: 1rem;
-  }
 } 

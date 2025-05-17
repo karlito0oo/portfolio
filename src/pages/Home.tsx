@@ -1,6 +1,21 @@
 import React from 'react';
+import profilePicture from '../assets/prof-pict.png';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  setActiveSection?: (section: string) => void;
+}
+
+const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
+  const handleNavigation = (section: string) => {
+    if (setActiveSection) {
+      setActiveSection(section);
+    } else {
+      // Fallback for when props aren't available
+      const element = document.getElementById(section);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home">
       <div className="container">
@@ -17,20 +32,14 @@ const Home: React.FC = () => {
               Throughout my seven-year career as full-stack developer, I have focused on developing scalable well documented codes. I enjoyed working collaboratively but can also run projects independently.
             </p>
             <div className="btn-group">
-              <button 
-                onClick={() => {
-                  const element = document.getElementById('experience');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <button
+                onClick={() => handleNavigation('projects')} 
                 className="btn btn-primary"
               >
                 View My Work
               </button>
-              <button 
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <button
+                onClick={() => handleNavigation('contact')}
                 className="btn btn-secondary"
               >
                 Contact Me
@@ -53,7 +62,7 @@ const Home: React.FC = () => {
           
           <div className="w-half-md">
             <div className="profile-image">
-              <img src="https://i.imgur.com/6VBx3io.png" alt="Karl Kenneth Flores" />
+              <img src={profilePicture} alt="Karl Kenneth Flores" />
             </div>
           </div>
         </div>
