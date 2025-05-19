@@ -20,14 +20,28 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
+    setSubmitError(false);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage('Thank you for your message! This is a frontend demo only, so no actual email was sent.');
+    try {
+      const response = await fetch('http://localhost:8000/api/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setSubmitMessage('Thank you for your message! I will get back to you soon.');
       setSubmitError(false);
       
       // Reset form
@@ -37,7 +51,12 @@ const Contact: React.FC = () => {
         subject: '',
         message: ''
       });
-    }, 1500);
+    } catch (error) {
+      setSubmitMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again later.');
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

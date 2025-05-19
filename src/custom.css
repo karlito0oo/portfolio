@@ -484,6 +484,7 @@ nav button:hover::after, nav button.active::after {
   color: var(--dark-color);
 }
 
+/* Default (light mode) */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -493,7 +494,15 @@ nav button:hover::after, nav button.active::after {
   font-family: inherit;
   font-size: 1rem;
   color: var(--text-color);
+  background-color: var(--background);
   transition: border-color 0.3s ease;
+}
+
+/* Only for dark mode */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  color: #fff !important;
+  background-color: #18191a;
 }
 
 .form-group input:focus,
@@ -501,6 +510,12 @@ nav button:hover::after, nav button.active::after {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b0b3b8 !important;
+  opacity: 1;
 }
 
 .submit-btn {
