@@ -58,7 +58,7 @@ const Experience: React.FC = () => {
         </p>
         
         <div className="timeline">
-          {experiences.map((experience, index) => (
+          {experiences.map((experience) => (
             <div 
               key={experience.id} 
               className="timeline-item"
